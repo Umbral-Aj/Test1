@@ -1,0 +1,641 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Not Subway</title>
+</head>
+<body>
+<!------------------------------------------------------------------------------>
+    <style>
+        #headdiv {
+            text-align: center;
+            width: 100%;
+            height: fit-content;
+            background-color:white;
+        }
+        #headh1{
+            font-size: 50px;
+            border-bottom: lightgray solid 1px;
+        }
+    </style>
+
+
+
+
+    <div id="headdiv">
+        <h1 id="headh1">
+            <span style="color:green";> Not </span>
+            <span style="color:rgb(240, 208, 0);"> Sub</span><!--
+--><span style="color:green">Way</span>
+        </h1>
+    </div>
+<!------------------------------------------------------------------------------->
+    <style>
+        #leftdiv{
+            background-color: white;
+            width:50%;
+            float:left;
+        }
+        #namediv, #lengthdiv, #breaddiv, #meatdiv, #cheesediv{
+            background-color: white;
+            padding-left: 25%;
+            padding-top:30px;
+        }
+        #namelabel{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        #nameinput{
+            width: 300px;
+            height: 40px;
+            font-size: 25px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: green;
+        }
+        #lengthlabel{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        #sixincheslabel, #footlonglabel,
+        #italianlabel, #herbscheeselabel,
+        #multiflatlabel, #grain9label,
+        #heartyitalianlabel, #jalapenolabel,
+        #monterreylabel, #rosemarylabel,
+        #blackhamlabel, #grilledchickenlabel,
+        #tunalabel, #steaklabel,
+        #ballslabel, #roastbeeflabel,
+        #rotisserielabel, #nonelabel{
+            font-size: 25px;
+        }
+        #breadlabel, #meatlabel{
+            font-size: 35px;
+            font-weight: bold;
+        }
+    </style>
+
+
+
+
+    <div id="leftdiv">
+
+
+        <div id="namediv">
+            <label id="namelabel">
+                <span>Name your Order</span>
+                <br>
+            </label>
+            <form id="nameform" onsubmit="return false">
+                <input type="text" id="nameinput" placeholder="Order Name">
+            </form>
+        </div>
+
+
+        <div id="lengthdiv">
+            <label id="lengthlabel"> Length:</label>
+            <br>
+            <form onsubmit="return false" id="lengthform">
+               
+                <label class="container" for="footlong" id="footlonglabel"> FootLong
+                    <input type="radio" name="length" id="footlong" value="FootLong">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="sixinches" id="sixincheslabel"> Six Inches
+                    <input type="radio" name="length" id="sixinches" value="Six Inches">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+        </div>
+
+
+        <div id="breaddiv">
+            <label id="breadlabel"> Bread:</label>
+            <br>
+            <form onsubmit="return false" id="breadform">
+                <label class="container" for="italian" id="italianlabel"> Italian Bread
+                    <input type="radio" name="bread" id="italian" value="Italian Bread">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="herbscheese" id="herbscheeselabel"> Italian Herbs and Cheese Bread
+                    <input type="radio" name="bread" id="herbscheese" value="Italian Herbs and Cheese Bread">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="multiflat" id="multiflatlabel"> Multi-grain Flatbread
+                  <input type="radio" name="bread" id="multiflat" value="Multi-grain Flatbread">  
+                  <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="grain9" id="grain9label"> 9-Grain Wheat Bread
+                    <input type="radio" name="bread" id="grain9" value="9-Grain Wheat Bread">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="heartyitalian" id="heartyitalianlabel"> Hearty Italian Bread
+                    <input type="radio" name="bread" id="heartyitalian" value="Hearty Italian Bread">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="jalapeno" id="jalapenolabel"> Jalapeno Cheese Bread
+                    <input type="radio" name="bread" id="jalapeno" value="Jalapeno Cheese Bread">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="monterrey" id="monterreylabel"> Monterrey Cheddar Bread
+                    <input type="radio" name="bread" id="monterrey" value="Monterrey Cheddar Bread">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="rosemary" id="rosemarylabel"> Rosemary Sea Salt Bread
+                   <input type="radio" name="bread" id="rosemary" value="Rosemary Sea Salt Bread">
+                   <span class="checkmark"></span>
+                </label>
+                <br>
+            </form>
+        </div>
+
+
+        <div id="meatdiv">
+            <label id="meatlabel"> Meat: </label>
+            <form onsubmit="return false" id="meatform">
+                <label class="container" for="blackham" id="blackhamlabel"> Thin-Sliced Black Forest Ham
+                    <input type="radio" name="meat" id="blackham" value="Thin-Sliced Black Forest Ham">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="grilledchicken" id="grilledchickenlabel">Grilled Chicken
+                    <input type="radio" name="meat" id="grilledchicken" value="Grilled Chicken">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="tuna" id="tunalabel"> Tuna
+                    <input type="radio" name="meat" id="tuna" value="Tuna">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="steak" id="steaklabel"> Seasoned and Marinated Shaved Steak
+                    <input type="radio" name="meat" id="steak" value="Seasoned and Marinated Shaved Steak">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="balls" id="ballslabel">Meatballs
+                    <input type="radio" name="meat" id="balls" value="Meatballs">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="roastbeef" id="roastbeeflabel">Roast Beef
+                    <input type="radio" name="meat" id="roastbeef" value="Roast Beef">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="rotisserie" id="rotisserielabel">Rotisserie-Style Chiken
+                    <input type="radio" name="meat" id="rotisserie" value="Rotisserie-Style Chiken">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="none" id="nonelabel">None
+                    <input type="radio" name="meat" id="none" value="None">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+            </form>
+
+
+
+
+        </div>
+
+
+        <div id="cheesediv">
+            <label id="cheeselabel"> Cheese:</label>
+            <br>
+            <form onsubmit="return false" id="cheeseform">
+                <label class="container" for="american" id="americanlabel"> American Cheese
+                    <input type="radio" name="cheese" id="american" value="American Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="swiss" id="swisslabel"> Swiss Cheese
+                    <input type="radio" name="cheese" id="swiss" value="Swiss Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="feta" id="fetalabel"> Feta Cheese
+                    <input type="radio" name="cheese" id="feta" value="Feta Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="cheddar" id="cheddarlabel">Cheddar Cheese
+                    <input type="radio" name="cheese" id="cheddar" value="Cheddar Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="montereycheese" id="montereycheeselabel"> Monterey Cheddar
+                    <input type="radio" name="cheese" id="montereycheese" value="Monterey Cheddar">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="pepper" id="pepperlabel">Pepper Jack Cheese
+                    <input type="radio" name="cheese" id="pepper" value="Pepper Jack Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="mozzarella" id="mozzarellalabel"> Mozzarella Cheese
+                    <input type="radio" name="cheese" id="mozzarella" value="Mozzarella Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+                <label class="container" for="nonecheese" id="nonecheeselabel"> None
+                    <input type="radio" name="cheese" id="nonecheese" value="None Cheese">
+                    <span class="checkmark"></span>
+                </label>
+                <br>
+            </form>
+       </div>
+
+
+    </div>
+<!------------------------------------------------------------------------------->
+    <style>
+        #rightdiv{
+            background-color: white;
+            height: fit-content;
+            width:50%;
+            float: right;
+        }
+        #cheesediv, #toppingdiv, #saucediv, #drinkdiv, #orderbuttondiv{
+            padding-left: 25%;
+            padding-top:30px;
+        }
+        #cheeselabel, #toppinglabel, #saucelabel, #drinklabel{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        #americanlabel, #swisslabel, #fetalabel, #cheddarlabel,
+        #montereycheeselabel, #pepperlabel, #mozzarellalabel,
+        #mayolabel, #mustardlabel, #honeymustardlabel,
+        #buffalolabel, #sweetonionlabel, #ranchlabel,
+        #bajalabel, #aiolilabel, #nonesaucelabel{
+            font-size: 25px;
+        }
+    </style>
+
+
+
+
+    <div id="rightdiv">
+   
+       <div id="toppingdiv">
+        <label id="toppinglabel"> Toppings </label>
+        <br>
+        <form onsubmit="return false" id="toppingform">
+        <label class="contain" for="lettuce" id="lettucelabel"> Lettuce
+            <input type="checkbox" name="topping" id="lettuce" value="Lettuce">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="spinach" id="spinachlabel"> Spinach
+            <input type="checkbox" name="topping" id="spinach" value="Spinach">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="tomatoes" id="tomatoeslabel"> Tomatoes
+            <input type="checkbox" name="topping" id="tomatoes" value="Tomatoes">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="cucumbers" id="cucumberslabel"> Cucumbers
+            <input type="checkbox" name="topping" id="cucumbers" value="Cucumbers">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="greenp" id="greenplabel"> Green Peppers
+            <input type="checkbox" name="topping" id="greenp" value="Green Peppers">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="redonions" id="redonionslabel"> Red Onions
+            <input type="checkbox" name="topping" id="redonions" value="Red Onions">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="pickles" id="pickleslabel">Pickles
+            <input type="checkbox" name="topping" id="pickles" value="Pickles">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="olives" id="oliveslabel"> Black Olives
+            <input type="checkbox" name="topping" id="olives" value="Black Olives">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="jala" id="jalalabel">Jalapenos
+            <input type="checkbox" name="topping" id="jala" value="Jalapenos">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="bananapep" id="bananapeplabel"> Banana Peppers
+            <input type="checkbox" name="topping" id="bananapep" value="Banana Peppers">
+            <span class="checkma"></span>
+        </label>
+        <br>
+        <label class="contain" for="noneselect" id="noneselectlabel"> None
+            <input type="checkbox" name="topping" id="noneselect" value="None">
+            <span class="checkma"></span>
+        </label>
+        <br>
+    </form>
+       </div>
+
+
+       <div id="saucediv">
+        <label id="saucelabel"> Sauce: </label>
+        <br>
+        <form onsubmit="return false" id="sauceform">
+            <label class="container" for="mayo" id="mayolabel"> Mayonnaise
+                <input type="radio" name="sauce" id="mayo" value="Mayonnaise">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="mustard" id="mustardlabel"> Yellow Mustard
+                <input type="radio" name="sauce" id="mustard" value="Yellow Mustard">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="honeymustard" id="honeymustardlabel"> Honey Mustard
+                <input type="radio" name="sauce" id="honeymustard" value="Honey Mustard">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="buffalo" id="buffalolabel"> Buffalo Sauce
+                <input type="radio" name="sauce" id="buffalo" value="Buffalo Sauce">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="sweetonion" id="sweetonionlabel"> Sweet Onion Teriyaki
+                <input type="radio" name="sauce" id="sweetonion" value="Sweet Onion Teriyaki">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="ranch" id="ranchlabel"> Peppercorn Ranch
+                <input type="radio" name="sauce" id="ranch" value="Peppercorn Ranch">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="baja" id="bajalabel"> Baja Chipotle
+                <input type="radio" name="sauce" id="baja" value="Baja Chipotle">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="aioli" id="aiolilabel"> Roasted Garlic Aioli
+                <input type="radio" name="sauce" id="aioli" value="Roasted Garlic Aioli">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+            <label class="container" for="nonesauce" id="nonesaucelabel"> None
+                <input type="radio" name="sauce" id="nonesauce" value="None">
+                <span class="checkmark"></span>
+            </label>
+            <br>
+        </form>
+
+
+       </div>
+
+
+       <div id="drinkdiv">
+            <label id="drinklabel"> Drinks:</label>
+            <form id="drinkform">
+                <select name="drinks" id="drinksmenu">
+                    <option value="None"> None</option>
+                    <option value="Coca-Cola"> Coca-Cola</option>
+                    <option value="Diet Coke"> Diet Coke</option>
+                    <option value="Sprite"> Sprite</option>
+                    <option value="Iced Tea"> Iced Tea</option>
+                    <option value="Lemonade"> Lemonade</option>
+                </select>
+            </form>
+       </div>
+
+
+       <div id="orderbuttondiv">
+            <button id="orderbutton" onclick="submitorder()">
+                <span style="color:rgb(240, 208, 0)"> Place Order </span>
+            </button>
+            <br><br>
+            <button id="printbutton" onclick="printorder()">
+                <span style="color:rgb(240, 208, 0)"> Print Order </span>
+            </button>
+       </div>
+    </div>
+    <style>
+        #drinksmenu{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            border-color: green;
+            width: 200px;
+            height: 50px;
+            font-size: 25px;
+        }
+        #orderbutton {
+            width: 200px;
+            height: 50px;
+            font-size: 25px;
+            text-align: center;
+            background-color: green;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 5px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 9px #999;
+            cursor: pointer;
+            font-weight: bold;
+
+
+           
+        }
+        #orderbutton:hover {background-color: rgb(0, 160, 0)}
+        #orderbutton:active {
+            background-color: rgb(0, 160,0);
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+}
+
+
+#printbutton {
+            width: 200px;
+            height: 50px;
+            font-size: 25px;
+            text-align: center;
+            background-color: green;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 5px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 9px #999;
+            cursor: pointer;
+            font-weight: bold;
+
+
+           
+        }
+        #printbutton:hover {background-color: rgb(0, 160, 0)}
+        #printbutton:active {
+            background-color: rgb(0, 160, 0);
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+}
+    </style>
+    <style>
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-bottom:0px;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: green;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+    </style>
+    <style>
+        .contain {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+}
+        .contain input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkma{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+        .contain:hover input ~ .checkma{
+            background-color: #ccc;
+        }
+        .contain input:checked ~ .checkma{
+            background-color: green;
+        }
+        .checkma:after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .contain input:checked ~ .checkma:after {
+            display: block;
+        }
+        .contain .checkma:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+
+    </style>
+    <script>
+        function submitorder(){
+            document.getElementById("nameform").submit();
+            document.getElementById("lengthform").submit();
+            document.getElementById("breadform").submit();
+            document.getElementById("meatform").submit();
+            document.getElementById("cheeseform").submit();
+            document.getElementById("toppingform").submit();
+            document.getElementById("sauceform").submit();
+            document.getElementById("drinkform").submit();
+
+
+            var name = document.getElementById("nameform").value;
+            var lengt= document.getElementById("lengthform").value;
+            var bread= document.getElementById("breadform").value;
+            var meat = document.getElementById("meatform").value;
+            var chees= document.getElementById("cheeseform").value;
+            var topp = document.getElementById("toppingform").value;
+            var sauce= document.getElementById("sauceform").value;
+            var drink= document.getElementById("drinkform").value;
+
+
+            console.log(name + ", " + lengt + ", " + bread + ", " + meat + ", " + chees + ", " + topp + ", " + sauce+ ", " + drink);
+           
+            // document.getElementById("nameform").reset();
+            // document.getElementById("lengthform").reset();
+            // document.getElementById("breadform").reset();
+            // document.getElementById("meatform").reset();
+            // document.getElementById("cheeseform").reset();
+            // document.getElementById("toppingform").reset();
+            // document.getElementById("sauceform").reset();
+            // document.getElementById("drinkform").reset();
+
+
+        }
+    </script>
+</body>
+</html>
